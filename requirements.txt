@@ -1,3 +1,4 @@
-SQLAlchemy==0.9.1
-MySQL-python==1.2.5
-nose
+mysqlclient==2.2.0
+SQLAlchemy==1.4.50
+pytest==7.4.3
+black==23.10.1

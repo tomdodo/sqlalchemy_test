@@ -1,0 +1,19 @@
+  version: "3"
+  services:
+    database:
+      image: mysql:5.6.38
+      volumes:
+        - ./db-entrypoint:/docker-entrypoint-initdb.d
+      ports:
+        - 13306:3306
+      environment:
+        MYSQL_ROOT_PASSWORD: insecure
+
+
+    python:
+      depends_on:
+        - database
+      build: .
+      working_dir: /app
+      volumes:
+        - ./:/app

@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS relationship_joins;
+USE relationship_joins;
+
 create table Company (
 	`id` integer primary key,
 	`name` varchar(200)
